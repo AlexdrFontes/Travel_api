@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyText
+  date_of_arrival: 2018-10-09
+  date_of_departure: 2018-10-09
+
+two:
+  name: MyString
+  description: MyText
+  date_of_arrival: 2018-10-09
+  date_of_departure: 2018-10-09
