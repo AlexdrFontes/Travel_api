@@ -4,6 +4,11 @@ class V1::PlacesController < ApplicationController
     render json: @places, status: :ok
   end
 
+  def show
+    @place = Place.where(id: params[:id]).first
+    render json: @place, status: :ok
+  end
+
   def create
     @trip = Trip.find(params[:trip_id])
     @place = Place.new(place_params)
@@ -38,6 +43,6 @@ class V1::PlacesController < ApplicationController
   private
 
   def place_params
-    params.permit(:name,:description)
+    params.permit(:name,:description, :date_of_visit, :location, :point_of_interest)
   end
 end
